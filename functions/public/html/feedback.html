@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feedback | CodeHunt</title>
+
+    <link rel="icon" href="../icon.png">
+    <link rel="stylesheet" href="../styles/feedback.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+
+    <script src="../js/feedback.js"></script>
+
+    <header>
+        <nav>
+            <h1><a href="../index.html" target="_self">CodeHunt</a></h1>
+            <div id="nav-links">
+                <a href="../index.html" target="_self" class="nav-link"><div>Home</div></a>
+                <a href="../login.html" target="_self" class="nav-link" id="userstate">Login</a>
+            </div>
+        </nav>
+        <div class="stripes">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="banner-content">
+            <h1>FeedBack Form</h1>
+            <p>Want to ask any query? Or want us to add a resource.
+                Send a response via this feedback form.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-stripes">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <form action="" method="GET" name="feedbackform" id="feedbackform" onsubmit="return validate()">
+            <div class="form-element">
+                <label class="label" for="name">Name : </label>
+                <input class="input" type="text" id="name" name="name">
+            </div>
+
+            <div class="form-element">
+                <label class="label" for="email">Email : </label>
+                <input class="input" type="email" id="email" name="email">
+            </div>
+
+            <div class="form-element">
+                <label class="label" for="phone">Mobile No  : </label>
+                <input class="input" type="text" id="phone" name="phone">
+            </div>
+
+            <div class="form-element">
+                <label class="label" for="query">Type of query : </label>
+                <div class="input-query">
+                    <label for="feedback">Feedback
+                        <input type="checkbox" id="feedback" name="query" value="feedback">
+                    </label>
+
+                    <label for="linkadd">Suggestions
+                        <input type="checkbox" id="linkadd" name="query" value="linkadd">
+                    </label>
+
+                    <label for="help">Need Help?
+                        <input type="checkbox" id="help" name="query" value="help">
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-element">
+                <label class="label" for="feedback">Feedback : </label>
+                <textarea id="feedback" name="feedback"></textarea>
+            </div>
+
+            <div class="form-element">
+                <button class="mat-button-class submit" type="submit">Submit</button>
+                <button class="mat-button-class clear" type="reset">Cancel</button>
+            </div>
+        </form>
+
+    </main>
+
+    <footer>
+        <div id="team">
+            <h2>Our Team</h2>
+            <p>Pragun</p>
+            <p>Anubhav</p>
+            <p>Priyanshu</p>
+            <p>Kuldeep</p>
+        </div>
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <p>Address: NIT Kurukshetra</p>
+            <p>Phone: +91-704208XXXX</p>
+            <p>Email: codehunt@gmail.com</p>
+        </div>
+        <div id="social">
+            <h2>Social</h2>
+            <div>
+                <span><a style="color: rgb(82, 80, 80);" href="https://facebook.com"><i class="fab fa-facebook fa-2x"></i></a></span>
+                <span><a style="color: rgb(82, 80, 80);" href="https://twitter.com"><i class="fab fa-twitter-square fa-2x"></i></a></span>
+                <span><a style="color: rgb(82, 80, 80);" href="https://youtube.com"><i class="fab fa-youtube fa-2x"></i></a></span>
+                <span><a style="color: rgb(82, 80, 80);" href="https://linkedin.com"><i class="fab fa-linkedin fa-2x"></i></a></span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

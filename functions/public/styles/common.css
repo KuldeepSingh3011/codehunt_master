@@ -1,0 +1,451 @@
+
+/* GLOBAL CLASSES AND STYLES */
+
+.mat-button-class {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    white-space: nowrap;
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 14px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    transition: all .15s ease;
+    box-shadow:  0 4px 6px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+body {
+    font-family: Raleway;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+/* GLOBAL STYLES END */
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* HEADER STYLES */
+
+header {
+    position: relative;
+    height: calc(5 * 200px);
+}
+
+nav {
+    background: transparent;
+    margin: 1% 13%;
+    width: 74%;
+    height: 6em;
+    color: #3C226E;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 8fr 6fr; /* for heading and sub headings */
+    align-items: center;
+    position: relative;
+}
+
+/* Website Name */
+nav h1 {
+    font-weight: bold;
+    margin-left: 2em;
+    font-size: 2em;
+    justify-self: left;
+    color: #3C226E;
+}
+
+nav h1 > a {
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+nav h1 > a:active {
+    color: white;
+}
+
+/* Navbar sub-headings */
+#nav-links {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+
+/* A navbar link style */
+.nav-link {
+    text-decoration: none;
+    color: #3C226E;
+    font-weight: bold;
+    font-size: 1.5rem;
+    justify-self: center;
+}
+
+/* GRADIENT STRIPED BACKGROUND */
+/* Container div */
+header .stripes {
+    z-index: 0;
+    position: absolute; /* relative to header */
+    top: -20px;
+    display: grid;
+    width: 100%;
+    height: calc(5 * 200px);
+    grid: repeat(5, 200px) / repeat(10, 1fr); /* 5 rows, 10 columns */
+    background: rgb(255,255,255);
+    background: linear-gradient(-12deg, rgba(255,255,255,1) 0%, rgb(99, 150, 226) 100%);
+    transform: skewY(-12deg); /* rotate the container */
+    transform-origin: 0;
+}
+
+/* Three stripes in the container */
+header .stripes :nth-child(1) {
+    grid-column: span 3;
+    background: rgb(85,51,255);
+    background: rgb(134,178,235);
+    background: linear-gradient(-12deg, rgb(108, 157, 221) 0%, rgb(153, 191, 238) 100%);
+}
+
+header .stripes :nth-child(2) {
+    grid-area: 4 / span 3 / auto / -1;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(187, 209, 233, 0.726) 0%, rgb(120, 173, 238) 100%);
+}
+
+header .stripes :nth-child(3) {
+    grid-row: 5;
+    grid-column: span 3;
+    background: rgb(255,255,255);
+    background: linear-gradient(-12deg, #E2E8F5 15%, #A0B8E8 100%);
+}
+
+/* Banner content - topic detail */
+#banner-content {
+    position: relative;
+    width: 70%;
+    height: 400px;
+    margin: 5em auto 2em auto;
+    z-index: 1;
+}
+
+#banner-content h1 {
+    font-size: 2em;
+    color: #3C226E;
+    text-transform: uppercase;
+}
+
+#banner-content p {
+    width: 50%;
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1.25em;
+}
+
+#banner-content a {
+    width: 10rem;
+    text-align: center;
+    font-size: 1.2em;
+    background: #00DA8B;
+    color: white;
+    font-weight: bold;
+}
+/* For button click effect */
+#banner-content a:hover {
+    margin-top: 3px;
+}
+
+/* HEADER STYLES OVER */
+
+
+
+/* MAIN CONTENT */
+
+main {
+    text-align: center;
+}
+
+/* Section having the links */
+.datalinks {
+    position: relative;
+    width: 100%;
+    margin: -26em 0; /* -ve to touch header */
+    padding: 2em 0;
+}
+
+/* Background of links */
+.topic-sprite {
+    top: 400px;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #F4F6FC;
+    transform: skewY(-12deg);
+    transform-origin: 0;
+}
+
+/* Section having the link blocks */
+.topic {
+    position: relative;
+    background: transparent;
+    width: 90%;
+    padding: 1em 2%;
+    border-radius: 4px;
+    margin: 1em auto 3em auto;
+}
+
+/* To put some space between links and upper portion */
+.topic:nth-child(2){
+    margin-top: 28em;
+}
+
+
+/* short text before links */
+.topic > h3 {
+    font-size: 3em;
+    margin: -2em 0 2em 0;
+    font-weight: 500;
+}
+
+
+/* Styles for the links */
+.topic .item {
+    color: #42FAA1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 10fr 2fr; /* arrow, score, link text, just for space */
+    align-items: center;
+    margin: 2em auto;
+    border-radius: 5px;
+    height: 8em;
+    background: rgb(27,255,107);
+    background: linear-gradient(-12deg, rgba(27,255,107,1) 0%, rgba(7,237,255,1) 100%);
+    box-shadow: 2px 2px 5px 2px grey;
+}
+
+/* a little hover effect for links */
+.topic .item:hover {
+    box-shadow: 2px 1px 5px 5px grey;
+}
+
+/* The upvote arrow made from borders */
+.up-arrow {
+    cursor: pointer;
+    margin-left: 25px;
+    border-color: rgb(87, 87, 87) transparent;
+    opacity: 0.9;
+    border-style: solid;
+    outline: none;
+    border-width: 0px 30px 30px 30px;
+    height: 0px;
+    width: 0px;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect on arrow */
+.up-arrow:hover {
+    opacity: 1;
+    border-color: rgb(37, 37, 37) transparent;
+    margin-top: 2px;
+}
+
+/* Score displayed in each link */
+.score {
+    font-weight: bold;
+    font-size: 1.7em;
+    color: rgba(255, 0, 0, 0.822);
+}
+
+/* Link styles */
+.link {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+}
+
+/* MAIN STYLES END */
+
+
+
+/* FOOTER STYLES */
+
+footer {
+    position: relative;
+    margin-top: 45em;
+    padding-top: 1em;
+    border-top: 1px solid rgba(189, 189, 190, 0.822);
+    background: #F5F8FC;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    font-size: 1.15em;
+    font-weight: 800;
+    color: rgba(79, 79, 80, 0.822);
+}
+
+footer p:hover {
+    color: black;
+}
+
+/* Darken icon on hover */
+footer i:hover {
+    cursor: pointer;
+    color: black;
+}
+
+footer h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+
+footer #team {
+    text-align: center;
+    grid-column: 2 / 4;
+}
+
+footer #contact {
+    text-align: center;
+    grid-column: 5 / 7;
+}
+
+footer #social {
+    padding: 1em 5em;
+    grid-column: 8 / 10;
+    text-align: center;
+}
+
+footer #social div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-auto-rows: 100%;
+}
+
+footer #social div span {
+    grid-column: span 1;
+}
+
+/* FOOTER STYLES END */
+
+/* PAGE STYLES END */
+
+
+/**** MEDIA QUERIES ****/
+
+/* FOR MOBILES */
+@media (max-width: 600px){
+
+    .stripes {
+        height: calc(5 * 175px);
+        grid: repeat(5, 175px) / repeat(10, 1fr);
+    }
+
+    .stripes span {
+        visibility: hidden;
+    }
+
+    nav {
+        overflow: hidden;
+        height: 3em;
+        margin-top: 10px;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+
+    nav h1 {
+        margin: 0;
+        justify-self: center;
+    }
+
+    #nav-links {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+
+    #banner-content {
+        width: 90%;
+        text-align: center;
+        margin: 5em auto 1em auto;
+    }
+
+    #banner-content p {
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    .datalinks {
+        margin: -23em 0;
+        padding: 10em 0;
+    }
+
+    .topic {
+        width: 90%;
+        margin: 1em auto 3em auto;
+    }
+
+    .topic > h3 {
+        font-size: 2em;
+    }
+
+    .topic-sprite {
+        top: 150px;
+    }
+
+
+    .topic:nth-child(2){
+        margin-top: 5em;
+    }
+
+    .topic .item {
+        font-size: 10px;
+        font-weight: 100;
+        grid-template-columns: 1fr 4fr 9fr;
+    }
+
+    .up-arrow{
+        margin-left: 10px;
+        border-width: 0px 15px 15px 15px;
+    }
+
+    .score {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+
+    footer {
+        margin-top: 15em;
+        grid-template-columns: 1fr;
+    }
+
+    footer #team {
+        grid-column: 1 / 2;
+    }
+
+    footer #contact {
+        grid-column: 1 / 2;
+    }
+
+    footer #social {
+        grid-column: 1 / 2;
+    }
+
+    footer #social div {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-bottom: 2em;
+    }
+
+}
+
+/* MEDIA QUERIES */
